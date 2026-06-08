@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT_INFO } from "@/data/clinicData";
+import logoImg from "@/public/logo/adorables-logo-DJvvbTF0.jpg";
 
 export default function Footer() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -27,12 +28,11 @@ export default function Footer() {
         {/* LEFT COLUMN: BRAND INFO & CLINIC HOURS */}
         <div className="lg:col-span-5 flex flex-col gap-6">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-clinic-green bg-white shadow-md">
+            <div className="relative rounded-xl overflow-hidden border-2 border-clinic-green bg-white shadow-md p-1 flex items-center justify-center">
               <Image
-                src="/logo/adorables-logo-DJvvbTF0.jpg"
+                src={logoImg}
                 alt="Adorables Pet Clinic Logo"
-                fill
-                className="object-cover"
+                className="h-12 w-auto object-contain"
               />
             </div>
             <div className="flex flex-col">

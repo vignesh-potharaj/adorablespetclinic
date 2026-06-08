@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_INFO } from "@/data/clinicData";
+import logoImg from "@/public/logo/adorables-logo-DJvvbTF0.jpg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,12 +28,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* LOGO */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-clinic-green bg-white shadow-md transition-transform duration-300 group-hover:scale-105">
+          <div className="relative rounded-xl overflow-hidden border-2 border-clinic-green bg-white shadow-md p-1 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
             <Image
-              src="/logo/adorables-logo-DJvvbTF0.jpg"
+              src={logoImg}
               alt="Adorables Pet Clinic Logo"
-              fill
-              className="object-cover"
+              className="h-10 md:h-12 w-auto object-contain"
               priority
             />
           </div>
