@@ -69,7 +69,7 @@ export const HUD_PHASES: PhaseData[] = [
   },
   {
     id: 4,
-    animal: "Bird",
+    animal: "All Pets",
     category: "05 / COMPLETE PHARMACY & DISPENSARY",
     title: "Premium Pet Pharmacy",
     subtitle: "Treating every pet like family with dedicated follow-up",
