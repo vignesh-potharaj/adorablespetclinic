@@ -55,7 +55,7 @@ export const HUD_PHASES: PhaseData[] = [
   },
   {
     id: 3,
-    animal: "Turtle",
+    animal: "Birds",
     category: "04 / BOARDING & RECOVERY STAY",
     title: "Cage-Free Boarding",
     subtitle: "A comfortable, stress-free, and homely environment",

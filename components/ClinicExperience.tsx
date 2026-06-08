@@ -81,11 +81,7 @@ export default function ClinicExperience({ scrollYProgress }: ClinicExperiencePr
               left: phrase.left,
             }}
           >
-            <div className="flex flex-col items-start gap-2.5">
-              {/* Telemetry/editorial index indicator */}
-              <span className="font-sans text-[10px] md:text-xs font-extrabold text-clinic-green tracking-widest uppercase bg-black/45 px-3 py-1 rounded-full backdrop-blur-xs border border-white/10 shadow-lg drop-shadow-md">
-                // SECTION 0{activePhaseIndex + 1}
-              </span>
+            <div className="flex flex-col items-start">
               
               {/* Prominent Cinematic Floating Heading */}
               <h2 className="font-display font-black text-white text-2xl md:text-4xl lg:text-5xl leading-tight tracking-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.95)]">
