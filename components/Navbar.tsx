@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CONTACT_INFO } from "@/data/clinicData";
@@ -8,18 +8,38 @@ import logoImg from "@/public/logo/adorables-logo-DJvvbTF0.jpg";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      const lastScrollY = lastScrollYRef.current;
+
+      // Handle transparent vs glass background based on scroll depth
+      setIsScrolled(currentScrollY > 20);
+
+      // Handle show/hide based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Scrolling down past the header height - hide navbar
+        setIsVisible(false);
+      } else {
+        // Scrolling up or at the very top - show navbar
+        setIsVisible(true);
+      }
+
+      lastScrollYRef.current = currentScrollY;
     };
-    window.addEventListener("scroll", handleScroll);
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 transform ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } ${
         isScrolled
           ? "py-3 px-4 md:px-8 bg-white/70 backdrop-blur-md shadow-sm border-b border-white/20"
           : "py-5 px-4 md:px-8 bg-transparent"

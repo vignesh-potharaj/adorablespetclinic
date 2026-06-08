@@ -45,11 +45,11 @@ export default function Home() {
     <main className="bg-soft-white relative min-h-screen">
       <Navbar />
 
-      {/* SCROLL SEQUENCE SECTION (Locked for 600vh) */}
+      {/* SCROLL SEQUENCE SECTION (Locked for 780vh) */}
       <section
         id="scrollytelling-container"
         ref={containerRef}
-        className="h-[600vh] relative"
+        className="h-[780vh] relative"
       >
         <div className="sticky top-0 h-screen w-full overflow-hidden bg-neutral-950">
           {isClient && (
