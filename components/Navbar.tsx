@@ -47,7 +47,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center group">
           <div className="relative rounded-xl overflow-hidden border-2 border-clinic-green bg-white shadow-md p-1 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
             <Image
               src={logoImg}
@@ -56,44 +56,70 @@ export default function Navbar() {
               priority
             />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display font-extrabold text-base md:text-lg tracking-tight leading-none text-neutral-900 group-hover:text-clinic-green transition-colors duration-300">
-              ADORABLES
-            </span>
-            <span className="font-sans text-[10px] md:text-xs font-bold tracking-widest text-clinic-green leading-none uppercase mt-0.5">
-              Pet Clinic
-            </span>
-          </div>
         </Link>
 
-        {/* NAVIGATION LINKS & CTAs */}
-        <div className="flex items-center gap-2 md:gap-6">
-          {/* Emergency Badge */}
-          <a
-            href={`tel:${CONTACT_INFO.phone.replace(/\s+/g, "")}`}
-            className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-red-50 border border-red-200 text-red-700 font-sans text-xs md:text-sm font-semibold hover:bg-red-100 transition-colors duration-300 group"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
-            </span>
-            <span className="hidden sm:inline">Emergency: </span>
-            <span className="font-extrabold tracking-wide group-hover:underline">
-              {CONTACT_INFO.phone}
-            </span>
-          </a>
-
-          {/* Book Appointment CTA */}
+        {/* MID NAVIGATION LINKS (Desktop only) */}
+        <nav className="hidden lg:flex items-center gap-8">
           <button
             onClick={() => {
-              const footer = document.getElementById("footer");
+              const el = document.getElementById("services");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600 hover:text-clinic-green transition-colors duration-300 cursor-pointer outline-none"
+          >
+            Services
+          </button>
+          <button
+            onClick={() => {
+              const el = document.getElementById("founder");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600 hover:text-clinic-green transition-colors duration-300 cursor-pointer outline-none"
+          >
+            Our Founder
+          </button>
+          <button
+            onClick={() => {
+              const el = document.getElementById("gallery");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600 hover:text-clinic-green transition-colors duration-300 cursor-pointer outline-none"
+          >
+            Gallery
+          </button>
+          <button
+            onClick={() => {
+              const el = document.getElementById("testimonials");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600 hover:text-clinic-green transition-colors duration-300 cursor-pointer outline-none"
+          >
+            About Us
+          </button>
+          <button
+            onClick={() => {
+              const el = document.getElementById("find-us");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="font-sans text-xs font-bold uppercase tracking-widest text-neutral-600 hover:text-clinic-green transition-colors duration-300 cursor-pointer outline-none"
+          >
+            Find Us
+          </button>
+        </nav>
+
+        {/* NAVIGATION LINKS & CTAs */}
+        <div className="flex items-center">
+          {/* Book Now CTA */}
+          <button
+            onClick={() => {
+              const footer = document.getElementById("find-us");
               if (footer) {
                 footer.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="px-4 py-2 md:px-6 md:py-2.5 rounded-full bg-clinic-green text-white font-sans text-xs md:text-sm font-bold shadow-md hover:bg-clinic-green-dark hover:shadow-lg transition-all duration-300 cursor-pointer"
+            className="px-5 py-2 md:px-7 md:py-2.5 rounded-full bg-clinic-green text-white font-sans text-xs md:text-sm font-bold shadow-md hover:bg-clinic-green-dark hover:shadow-lg transition-all duration-300 cursor-pointer"
           >
-            Book Appointment
+            Book Now
           </button>
         </div>
       </div>

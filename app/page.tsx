@@ -7,6 +7,8 @@ import ClinicScrollCanvas from "@/components/ClinicScrollCanvas";
 import ClinicExperience from "@/components/ClinicExperience";
 import ScrollDownIndicator from "@/components/ScrollDownIndicator";
 import ClinicServicesGrid from "@/components/ClinicServicesGrid";
+import ClinicFounder from "@/components/ClinicFounder";
+import ClinicGallery from "@/components/ClinicGallery";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
@@ -71,9 +73,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NATURAL FOOTER AND INFO SECTIONS (Scrolls after sequence ends) */}
       <div className="relative z-20 bg-white shadow-[0_-10px_50px_rgba(15,23,42,0.15)] border-t border-neutral-100">
         <ClinicServicesGrid />
+        <ClinicFounder />
+        <ClinicGallery />
         <Testimonials />
         <Footer />
       </div>

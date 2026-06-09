@@ -146,7 +146,7 @@ export const TESTIMONIALS: TestimonialItem[] = [
     petName: "Bruno (Golden Retriever)",
     role: "Pet Parent",
     text: "Adorables is hands-down the best pet clinic in Hyderabad! When Bruno had an emergency stomach issue at midnight, the emergency staff was ready. They did an ultrasound instantly and solved the issue with so much love.",
-    doctorMentioned: "Dr. K. Srinivas",
+    doctorMentioned: "Dr. Mahesh Allaeni",
     rating: 5
   },
   {

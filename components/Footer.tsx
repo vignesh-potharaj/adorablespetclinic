@@ -20,28 +20,20 @@ export default function Footer() {
   };
 
   return (
-    <footer id="footer" className="bg-clinic-blue-dark text-white pt-20 pb-10 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+    <footer id="find-us" className="bg-clinic-blue-dark text-white pt-20 pb-10 px-6 md:px-12 lg:px-24 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-clinic-green/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-white/10 relative z-10">
         {/* LEFT COLUMN: BRAND INFO & CLINIC HOURS */}
         <div className="lg:col-span-5 flex flex-col gap-6">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             <div className="relative rounded-xl overflow-hidden border-2 border-clinic-green bg-white shadow-md p-1 flex items-center justify-center">
               <Image
                 src={logoImg}
                 alt="Adorables Pet Clinic Logo"
                 className="h-12 w-auto object-contain"
               />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-extrabold text-lg tracking-tight leading-none text-white">
-                ADORABLES
-              </span>
-              <span className="font-sans text-[10px] font-bold tracking-widest text-clinic-green leading-none uppercase mt-0.5">
-                Pet Clinic
-              </span>
             </div>
           </Link>
 
