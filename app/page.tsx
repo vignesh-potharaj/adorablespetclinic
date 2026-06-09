@@ -11,6 +11,7 @@ import ClinicFounder from "@/components/ClinicFounder";
 import ClinicGallery from "@/components/ClinicGallery";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import FloatingCTA from "@/components/FloatingCTA";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,6 +81,9 @@ export default function Home() {
         <Testimonials />
         <Footer />
       </div>
+
+      {/* Floating fixed CTA booking button */}
+      <FloatingCTA />
     </main>
   );
 }
